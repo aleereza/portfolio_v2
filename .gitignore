@@ -1,0 +1,7 @@
+# Build Path of Test Fixtures
+test/**/public
+.gatsby-context.js
+.DS_Store
+public/
+node_modules/
+.cache/
