@@ -3,14 +3,14 @@ import Link from 'gatsby-link'
 
 class MainContent extends React.Component {
   constructor(props) {
-    super()
+    super(props)
     this.id = "main_content"
     this.dim_id = this.id + "_dim" //id of dimension element
-    this.state = { width: 0 }
+    this.state = { width: 0, id: "main_content",  dim_id: "main_content_dim",}
 
   }
   componentDidMount () {
-    this.element = document.getElementById(this.id)
+    var element = document.getElementById(this.id)
     this.updateDimensions()
     window.addEventListener('resize', this.updateDimensions);
 
@@ -25,10 +25,11 @@ class MainContent extends React.Component {
   }
 
   updateDimensions() {
+    var element = document.getElementById(this.state.id)
+    console.log(this.state.id)
     console.log("inside update")
-
-    console.log(this.element)
-    var rect = this.element.getBoundingClientRect()
+    console.log(element)
+    var rect = element.getBoundingClientRect()
     // rect is a DOMRect object with eight properties: left, top, right, bottom, x, y, width, height
     this.setState({ width: rect.width });
 
