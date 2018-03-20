@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import MainContent from '../components/MainContent'
+import MainContainer from '../components/MainContainer'
 import './index.css'
 
 const TemplateWrapper = ({ children }) => (
@@ -14,9 +15,11 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'web developer, Reactjs, Django' },
       ]}
     />
-    <MainContent>
-      {children()}
-    </MainContent>
+    <MainContainer>
+      <MainContent>
+        {children()}
+      </MainContent>
+    </MainContainer>
   </div>
 )
 
