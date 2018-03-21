@@ -1,7 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-class MainContent extends React.Component {
+import MainContent from './MainContent'
+import Container from './Container'
+
+class MainContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = { width: 0, height : 0}
@@ -27,13 +30,20 @@ class MainContent extends React.Component {
   }
 
   render() {
+    const w = this.state.width
+    const h = this.state.height
     return (
       <div>
-      <span>{this.state.width} x {this.state.height}</span>
-      {this.props.children}
+      <span>{w} x {h}</span>
+        <Container width = {w/4} height = {w/4}>
+
+          <p>{w}
+          </p>
+        </Container>
+        <Container width = {w/2} height = {h/4}/>
       </div>
     )
   }
 }
 
-export default MainContent
+export default MainContainer
