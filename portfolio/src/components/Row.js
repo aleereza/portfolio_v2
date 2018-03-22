@@ -1,7 +1,8 @@
+// kind of flex container for columns
 import React from 'react'
 import Link from 'gatsby-link'
 
-class Container extends React.Component {
+class Row extends React.Component {
   constructor(props) {
     super(props)
   }
@@ -11,11 +12,15 @@ class Container extends React.Component {
     var h = this.props.height
     return (
       <div style={{
-        background: '#DCDCDC',
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
         flex: p,
         width: w,
         height: h,
-        border: "1px solid black",
+
+        background: '#B22222',
+        border: "2px solid #800000",
       }}>
         {this.props.children}
       </div>
@@ -23,7 +28,5 @@ class Container extends React.Component {
   }
 }
 
-export default Container
-
-        // width: {this.state.width},
-        // height: {this.state.height},
+export default Row
+        // margin: "auto",

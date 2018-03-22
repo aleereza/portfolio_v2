@@ -1,8 +1,11 @@
+// MainContainer has the window dimensions data
 import React from 'react'
 import Link from 'gatsby-link'
 
 import MainContent from './MainContent'
 import Container from './Container'
+import Row from './Row'
+import Col from './Col'
 
 class MainContainer extends React.Component {
   constructor(props) {
@@ -34,13 +37,43 @@ class MainContainer extends React.Component {
     const h = this.state.height
     return (
       <div>
-      <span>{w} x {h}</span>
-        <Container width = {w/4} height = {w/4}>
-
-          <p>{w}
-          </p>
-        </Container>
-        <Container width = {w/2} height = {h/4}/>
+        <span>{w} x {h}</span>
+        <Row>
+          <Col>
+            <Row>
+              <Col portion = "1">
+                <Container width = "100px" height = "100px">
+                  <p>{w} inside col 1
+                  </p>
+                </Container>
+                <Container>
+                  <p>{w} inside col 1
+                  </p>
+                </Container>
+              </Col>
+              <Col portion = "3">
+                <Container portion = "3">
+                  <p>inside col 2 row 1
+                  </p>
+                </Container>
+                <Row portion = "1">
+                  <Container portion = "1">
+                    <p>1
+                    </p>
+                  </Container>
+                  <Container portion = "1">
+                    <p>222222222
+                    </p>
+                  </Container>
+                  <Container portion = "2">
+                    <p>3
+                    </p>
+                  </Container>
+                </Row>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
       </div>
     )
   }
