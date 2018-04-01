@@ -53,8 +53,7 @@ class MainContainer extends React.Component {
               </Col>
               <Col portion = "3">
                 <Container portion = "3">
-                  <p>inside col 2 row 1
-                  </p>
+                  {this.props.children}
                 </Container>
                 <Row portion = "1">
                   <Container portion = "1">

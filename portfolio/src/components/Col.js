@@ -1,3 +1,6 @@
+//some ground rules for column
+//all items in column should fill the column width
+//all items in column should be one of these: fill height, place in midle, place in top, place in buttom
 import React from 'react'
 import Link from 'gatsby-link'
 

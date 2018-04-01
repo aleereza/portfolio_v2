@@ -42,8 +42,7 @@ class MainContent extends React.Component {
   render() {
     return (
       <div>
-        <p>something...
-        </p>
+	{this.props.children}
       </div>
     )
   }
