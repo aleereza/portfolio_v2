@@ -14,6 +14,8 @@ class Col extends React.Component {
       <div style={{
         display: "flex",
         flexDirection: "column",
+        alignItems: "stretch",
+        justifyContent: "center",
         flex: p,
         background: '#00BFFF',
         border: "2px solid #0033cc",

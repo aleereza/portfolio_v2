@@ -42,11 +42,11 @@ class MainContainer extends React.Component {
           <Col>
             <Row>
               <Col portion = "1">
-                <Container width = "100px" height = "100px">
+                <Container portion = "0">
                   <p>{w} inside col 1
                   </p>
                 </Container>
-                <Container>
+                <Container portion = "1">
                   <p>{w} inside col 1
                   </p>
                 </Container>
@@ -79,3 +79,4 @@ class MainContainer extends React.Component {
 }
 
 export default MainContainer
+// <Container width = "100px" height = "100px">

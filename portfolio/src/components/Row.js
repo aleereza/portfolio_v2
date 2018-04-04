@@ -14,11 +14,14 @@ class Row extends React.Component {
       <div style={{
         display: "flex",
         flexDirection: "row",
+        alignItems: "stretch",
         justifyContent: "center",
         flex: p,
         width: w,
         height: h,
-
+        justifyContent: "space-around",
+        // maxWidth: "710px",
+        // margin: "auto",
         background: '#B22222',
         border: "2px solid #800000",
       }}>
