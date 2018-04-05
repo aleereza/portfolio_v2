@@ -9,6 +9,8 @@ class Container extends React.Component {
     var p = this.props.portion
     var w = this.props.width
     var h = this.props.height
+    var minw = this.props.minw
+    var maxw = this.props.maxw
     return (
       <div style={{
         background: '#DCDCDC',

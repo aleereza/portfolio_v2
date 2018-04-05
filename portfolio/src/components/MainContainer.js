@@ -7,6 +7,8 @@ import Container from './Container'
 import Row from './Row'
 import Col from './Col'
 
+import Pic from './Pic'
+
 class MainContainer extends React.Component {
   constructor(props) {
     super(props)
@@ -43,29 +45,28 @@ class MainContainer extends React.Component {
             <Row>
               <Col portion = "1">
                 <Container portion = "0">
-                  <p>{w} inside col 1
-                  </p>
+                  <Pic/>
                 </Container>
                 <Container portion = "1">
                   <p>{w} inside col 1
                   </p>
                 </Container>
               </Col>
-              <Col portion = "3">
-                <Container portion = "3">
+              <Col portion = "5">
+                <Container portion = "5">
                   {this.props.children}
                 </Container>
                 <Row portion = "1">
                   <Container portion = "1">
-                    <p>1
+                    <p>About
                     </p>
                   </Container>
                   <Container portion = "1">
-                    <p>222222222
+                    <p>Work
                     </p>
                   </Container>
-                  <Container portion = "2">
-                    <p>3
+                  <Container portion = "1">
+                    <p>Contact
                     </p>
                   </Container>
                 </Row>
