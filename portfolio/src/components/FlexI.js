@@ -14,8 +14,12 @@ class FlexI extends React.Component {
       <div style={{
         order: order,
         flex: flex,
-        background: '#DCDCDC',
-        border: "1px solid black",
+
+        textAlign: "center",
+        verticalAlign: "middle",
+
+        // background: '#DCDCDC',
+        border: "1px solid red",
       }}>
         {this.props.children}
       </div>

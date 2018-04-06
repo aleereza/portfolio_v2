@@ -484,3 +484,7 @@ pre tt:after {
 #main_content{
   border: 1px solid silver;
 }
+#main_div{
+  position: relative;
+  top:20%;
+}

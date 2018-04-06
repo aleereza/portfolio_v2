@@ -34,8 +34,8 @@ class FlexC extends React.Component {
         justifyContent: justify,
         alignItems: align,
 
-        background: '#DCDCDC',
-        border: "1px solid black",
+        // background: '#DCDCDC',
+        border: "1px solid blue",
       }}>
         {this.props.children}
       </div>

@@ -7,6 +7,7 @@ import MainContainer from '../components/MainContainer'
 
 import FlexC from '../components/FlexC'
 import FlexI from '../components/FlexI'
+import Button from '../components/Button'
 
 import Pic from '../components/Pic'
 
@@ -21,12 +22,10 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'web developer, Reactjs, Django' },
       ]}
     />
-    <MainContainer>
-      SsSsS
-    </MainContainer>
-    <FlexC flow="row nowrap" justify="center" align="stretch" minw="300">
+  <div id="main_div">
+    <FlexC flow="row nowrap" justify="center" align="stretch" minw="300px">
 
-      <FlexC flow="column wrap" justify="center" align="stretch" w="100">
+      <FlexC flow="column wrap" justify="center" align="stretch" w="100px">
         <FlexI flex="0 0 10pxs">
           <Pic/>
         </FlexI>
@@ -41,24 +40,33 @@ const TemplateWrapper = ({ children }) => (
         </FlexI>
       </FlexC>
 
-      <FlexC flow="column nowrap" justify="center" align="stretch" w="400">
+      <FlexC flow="column nowrap" justify="center" align="stretch" w="400px">
         <FlexI flex="1 0 auto">
-          main content
+          <MainContent>
+            {children()}
+          </MainContent>
         </FlexI>
         <FlexC flow="row nowrap" justify="center" align="stretch">
-          <FlexI flex="1 0 auto">
-            main link1
+          <FlexI flex="1 1 0">
+            <Button>
+              About
+            </Button>
           </FlexI>
-          <FlexI flex="1 0 auto">
-            main link2
+          <FlexI flex="1 1 0">
+            <Button>
+              Works
+            </Button>
           </FlexI>
-          <FlexI flex="1 0 auto">
-            main link3
+          <FlexI flex="1 1 0">
+            <Button>
+              Contact
+            </Button>
           </FlexI>
         </FlexC>
       </FlexC>
 
     </FlexC>
+  </div>
   </div>
 )
 
