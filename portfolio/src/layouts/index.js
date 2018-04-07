@@ -23,7 +23,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
   <div id="main_div">
-    <FlexC flow="row nowrap" justify="center" align="stretch" minw="300px">
+  <div className="layout1">
 
       <FlexC flow="column wrap" justify="center" align="stretch" w="100px">
         <FlexI flex="0 0 10pxs">
@@ -65,7 +65,7 @@ const TemplateWrapper = ({ children }) => (
         </FlexC>
       </FlexC>
 
-    </FlexC>
+    </div>
   </div>
   </div>
 )

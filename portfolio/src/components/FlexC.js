@@ -20,27 +20,32 @@ class FlexC extends React.Component {
     var flex = this.props.flex //string ex: "0 1 auto"
 
     return (
-      <div style={{
-        order: order,
-        flex: flex,
-
-        minWidth: minw,
-        maxWidth: maxw,
-        width: w,
-        height: h,
-        overflow: "auto",
-        display: "flex",
-        flexFlow: flow,
-        justifyContent: justify,
-        alignItems: align,
-
-        // background: '#DCDCDC',
-        border: "1px solid blue",
-      }}>
+      <div>
         {this.props.children}
       </div>
     )
   }
+
+
 }
 
 export default FlexC
+// flexFlow: flow,
+
+// style={{
+// order: order,
+// flex: flex,
+//
+// minWidth: minw,
+// maxWidth: maxw,
+// width: w,
+// height: h,
+// overflow: "auto",
+// display: "flex",
+//
+// justifyContent: justify,
+// alignItems: align,
+//
+// // background: '#DCDCDC',
+// border: "1px solid blue",
+// }}
