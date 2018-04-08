@@ -23,47 +23,48 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
   <div id="main_div">
-  <div className="layout1">
-
-      <FlexC flow="column wrap" justify="center" align="stretch" w="100px">
-        <FlexI flex="0 0 10pxs">
+    <div className="layout">
+      <div className="layout_1">
+        <div className="layout_1_1">
           <Pic/>
-        </FlexI>
-        <FlexI flex="1 0 auto">
-          link1
-        </FlexI>
-        <FlexI flex="1 0 auto">
-          link2
-        </FlexI>
-        <FlexI flex="1 0 auto">
-          link3
-        </FlexI>
-      </FlexC>
+        </div>
+        <div className="layout_1_2">
+          <div className="layout_1_2_1">
+            Linkedin
+          </div>
+          <div className="layout_1_2_1">
+            Github
+          </div>
+          <div className="layout_1_2_1">
+            Codepen
+          </div>
+        </div>
+      </div>
 
-      <FlexC flow="column nowrap" justify="center" align="stretch" w="400px">
-        <FlexI flex="1 0 auto">
+      <div className="layout_2">
+        <div className="layout_2_1">
           <MainContent>
             {children()}
           </MainContent>
-        </FlexI>
-        <FlexC flow="row nowrap" justify="center" align="stretch">
-          <FlexI flex="1 1 0">
+        </div>
+        <div className="layout_2_2">
+          <div className="layout_2_2_1">
             <Button>
               About
             </Button>
-          </FlexI>
-          <FlexI flex="1 1 0">
+          </div>
+          <div className="layout_2_2_1">
             <Button>
               Works
             </Button>
-          </FlexI>
-          <FlexI flex="1 1 0">
+          </div>
+          <div className="layout_2_2_1">
             <Button>
               Contact
             </Button>
-          </FlexI>
-        </FlexC>
-      </FlexC>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>

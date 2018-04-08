@@ -56,13 +56,13 @@ sub {
 sup {
   top: -.5em;
 }
-img {
+/* img {
   border-style: none;
-}
+} */
 svg:not(:root) {
   overflow: hidden;
 }
-img {
+/* img {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
@@ -72,7 +72,7 @@ img {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-}
+} */
 h1 {
   margin-left: 0;
   margin-right: 0;
@@ -490,7 +490,7 @@ pre tt:after {
 }
 
 /*========== responsive layout ===========*/
-.layout1{
+.layout{
   display: flex;
   flex-flow: column nowrap;
   overflow: auto;
@@ -502,10 +502,64 @@ pre tt:after {
   background: #DCDCDC;
   border: 1px solid blue;
 }
-@media only screen and (min-width: 600px) {
-  .layout1{
-    flex-flow: row nowrap;
-    width: 600px;
+.layout_1{
+  flex: 1 0 1;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: auto;
+  justify-content: center;
+  align-items: stretch;
 
+  background: #DCDCDC;
+  border: 1px solid blue;
+}
+.layout_1_1{
+  flex: 0 0 1;
+  border: 1px solid blue;
+}
+.layout_1_2{
+  flex: 1 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+.layout_2{
+  flex: 4 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.layout_2_1{
+  flex: 1 0 0;
+}
+.layout_2_2{
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.layout_2_2_1{
+  flex: 1 0 0;
+}
+
+@media only screen and (min-width: 425px) {
+  .layout_2_2{
+    flex-flow: row nowrap;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .layout{
+    flex-flow: row nowrap;
+    width: 768px;
+    margin: auto;
+
+  }
+  .layout_1{
+    flex-flow: column nowrap;
+  }
+  .layout_1_2{
+    flex: 1 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
   }
 }
