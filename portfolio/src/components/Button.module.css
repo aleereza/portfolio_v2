@@ -29,3 +29,6 @@
 .button:focus {
   outline:0;
 }
+.button_container{
+  padding: 5px;
+}
